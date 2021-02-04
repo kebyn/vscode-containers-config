@@ -1,5 +1,5 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/go
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/go
 {
 	"name": "Go",
 	"build": {
@@ -12,10 +12,13 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"go.useGoProxyToCheckForToolUpdates": false,
 		"go.useLanguageServer": true,
@@ -23,20 +26,18 @@
 		"go.goroot": "/usr/local/go",
 		"go.toolsGopath": "/go/bin"
 	},
-	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"golang.Go",
 		"adamhartford.vscode-base64"
 	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8000],
-
+	// "forwardPorts": [],
+	"forwardPorts": [
+		8000
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "go version",
-
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
 }
-// Golang
