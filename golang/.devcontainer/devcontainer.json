@@ -27,6 +27,7 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"redhat.vscode-yaml",
 		"golang.Go",
 		"adamhartford.vscode-base64"
 	],

@@ -15,7 +15,6 @@
 	},
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
 		"python.pythonPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
@@ -31,6 +30,7 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"redhat.vscode-yaml",
 		"ms-toolsai.jupyter",
 		"ms-python.python",
 		"ms-python.vscode-pylance",
