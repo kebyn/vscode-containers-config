@@ -8,28 +8,40 @@
 		"--security-opt",
 		"seccomp=unconfined"
 	],
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"lldb.executable": "/usr/bin/lldb",
-		// VS Code don't watch files under ./target
-		"files.watcherExclude": {
-			"**/target/**": true
-		}
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"lldb.executable": "/usr/bin/lldb",
+				// VS Code don't watch files under ./target
+				"files.watcherExclude": {
+					"**/target/**": true
+				}
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"bungcip.better-toml",
+				"serayuzgur.crates",
+				"matklad.rust-analyzer",
+				"vadimcn.vscode-lldb",
+				// "mutantdino.resourcemonitor"
+			]
+		},
 	},
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"redhat.vscode-yaml",
-		"rust-lang.rust",
-		"bungcip.better-toml",
-		"vadimcn.vscode-lldb",
-		"serayuzgur.crates",
-		// "matklad.rust-analyzer",
-		// "mutantdino.resourcemonitor"
+	"mounts": [
+		"source=dind-var-lib-docker-${devcontainerId},target=/var/lib/docker"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "rustc --version",
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"features": {
+		"docker-in-docker": "latest",
+		// "docker-from-docker": "latest",
+		"git": "os-provided",
+		// "git-lfs": "latest",
+		// "github-cli": "latest",
+	}
 }
