@@ -28,6 +28,7 @@
 				"VisualStudioExptTeam.vscodeintellicode",
 				"vmware.vscode-boot-dev-pack",
 				"redhat.fabric8-analytics",
+				"rangav.vscode-thunder-client",
 			]
 		}
 	},

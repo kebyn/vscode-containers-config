@@ -32,6 +32,7 @@
 				"visualstudioexptteam.vscodeintellicode",
 				"adamhartford.vscode-base64",
 				"github.copilot",
+				"rangav.vscode-thunder-client",
 			]
 		}
 	},

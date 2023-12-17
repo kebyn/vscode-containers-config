@@ -34,6 +34,7 @@
 				"redhat.vscode-yaml",
 				"golang.Go",
 				"adamhartford.vscode-base64",
+				"rangav.vscode-thunder-client",
 			]
 		}
 	},

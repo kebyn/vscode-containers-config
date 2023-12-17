@@ -25,6 +25,7 @@
 				"matklad.rust-analyzer",
 				"vadimcn.vscode-lldb",
 				// "mutantdino.resourcemonitor"
+				"rangav.vscode-thunder-client",
 			]
 		},
 	},
