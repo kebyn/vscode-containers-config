@@ -7,7 +7,7 @@
 		"dockerfile": "Dockerfile",
 		"context": "..",
 		"args": {
-			"VARIANT": "11",
+			"VARIANT": "21",
 			// Options
 			"INSTALL_MAVEN": "true",
 			"INSTALL_GRADLE": "false",

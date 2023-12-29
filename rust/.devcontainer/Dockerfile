@@ -1,6 +1,6 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.145.1/containers/rust/.devcontainer/base.Dockerfile
-
-FROM mcr.microsoft.com/vscode/devcontainers/rust:0-1
+ARG VARIANT="1"
+FROM mcr.microsoft.com/vscode/devcontainers/rust::${VARIANT}
 
 ENV RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 # ENV RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
