@@ -12,10 +12,10 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/l
 ENV GO111MODULE=on
 ENV GOPROXY=https://goproxy.cn
 
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list \
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list.d/debian.sources \
     && apt-get update \
-    && npm config set registry https://registry.npm.taobao.org \
-    && yarn config set registry https://registry.npm.taobao.org
+    && npm config set registry https://registry.npmmirror.com \
+    && yarn config set registry https://registry.npmmirror.com
     
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

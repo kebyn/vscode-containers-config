@@ -5,6 +5,6 @@ ARG VARIANT="buster"
 FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
 # ** [Optional] Uncomment this section to install additional packages. **
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list \
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list.d/debian.sources \
     && apt-get update
 

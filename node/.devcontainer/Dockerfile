@@ -5,10 +5,10 @@ ARG VARIANT="16-buster"
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list \
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/; s/security.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list.d/debian.sources \
     && apt-get update \
-    && npm config set registry https://registry.npm.taobao.org \
-    && yarn config set registry https://registry.npm.taobao.org
+    && npm config set registry https://registry.npmmirror.com \
+    && yarn config set registry https://registry.npmmirror.com
     
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10

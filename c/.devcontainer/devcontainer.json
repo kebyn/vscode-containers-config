@@ -21,7 +21,6 @@
 			"extensions": [
 				"redhat.vscode-yaml",
 				"ms-vscode.cpptools",
-				"rangav.vscode-thunder-client",
 			],
 		},
 	},

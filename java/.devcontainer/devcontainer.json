@@ -28,13 +28,13 @@
 				"VisualStudioExptTeam.vscodeintellicode",
 				"vmware.vscode-boot-dev-pack",
 				"redhat.fabric8-analytics",
-				"rangav.vscode-thunder-client",
+				"redhat.vscode-xml"
 			]
 		}
 	},
 	"mounts": [
 		"source=dind-var-lib-docker-${devcontainerId},target=/var/lib/docker",
-		"source=m2,target=/home/vscode/.m2,type=volume",
+		"source=m2,target=/home/${containerEnv:HOME}/.m2,type=volume",
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

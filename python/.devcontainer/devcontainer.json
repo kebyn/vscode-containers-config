@@ -24,25 +24,25 @@
 				"ms-toolsai.jupyter",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
-				// "ms-python.isort",
-				// "ms-python.pylint",
-				// "ms-python.autopep8",
-				// "ms-python.mypy-type-checker",
 				"charliermarsh.ruff",
 				"visualstudioexptteam.vscodeintellicode",
+				"eamodio.gitlens",
 				"adamhartford.vscode-base64",
-				"github.copilot",
-				"rangav.vscode-thunder-client",
+				"-github.copilot",
+				"-ms-python.isort",
+				"-ms-python.pylint",
+				"-ms-python.autopep8",
 			]
 		}
 	},
 	"mounts": [
-		"source=dind-var-lib-docker-${devcontainerId},target=/var/lib/docker"
+		"source=dind-var-lib-docker-${devcontainerId},target=/var/lib/docker",
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	// uv pip compile --system requirements.in --output-file requirements.txt
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {
