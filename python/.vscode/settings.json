@@ -5,4 +5,19 @@
   "python.autoComplete.extraPaths": [
     "./src"
   ],
+  // "python.linting.pylintArgs": [
+  //   "--enable=W0614",
+  //   "--enable=W0611"
+  //   // "--disable=C0114",
+  //   // "--disable=C0115",
+  //   // "--disable=C0116",
+  // ],
+  "python.envFile": "",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  }
 }
